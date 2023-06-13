@@ -6,5 +6,7 @@ dependencies:
   - jupyterlab
   - jupyter_server<2
   - pip
+  - cartopy
   - pip:
       - sphinx-pythia-theme
+      - geoviews
