@@ -1,41 +1,44 @@
 <img src="thumbnail.png" alt="thumbnail" width="300"/>
 
-# (Replace_with_your_title) Cookbook
+# Web Map / Feature Services Cookbook
 
 [![nightly-build](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml)
-[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
+[![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
 
-This Project Pythia Cookbook covers ... (replace `...` with the main subject of your cookbook ... e.g., _working with radar data in Python_)
+This Project Pythia Cookbook covers retrieving and using web map / feature services to help provide the necessary spatial context to your data.
 
 ## Motivation
 
-(Add a few sentences stating why this cookbook will be useful. What skills will you, "the chef", gain once you have reached the end of the cookbook?)
+By leveraging web map / feature services, users can easily access pre-processed data layers, utilize ready-to-use tiles, and benefit from production-level data that is continuously updated. This streamlines the data acquisition process and enables users to focus on their analysis tasks rather than data processing.
+
+- Pre-processed Data: Web map services provide access to a wide range of pre-processed geospatial data layers. This eliminates the need for users to perform data processing tasks themselves, saving time and effort.
+
+- Ready-to-Use Tiles: Users can simply fetch the tiles from the web map services and use them as a reference or overlay in their analysis. This makes it convenient to integrate the data into their own applications without the need to handle complex data processing workflows.
+
+- Production-Level Data: Web map services are often deployed at production level, ensuring that the data is up-to-date and near real-time. This is particularly advantageous for applications that require the latest information, such as weather monitoring or real-time asset tracking.
 
 ## Authors
 
-[First Author](@first-author), [Second Author](@second-author), etc. _Acknowledge primary content authors here_
+[Andrew Huang](https://github.com/ahuang11)
 
 ### Contributors
 
-<a href="https://github.com/ProjectPythia/cookbook-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythia/cookbook-template" />
+<a href="https://github.com/ahuang11/web-map-feature-services-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ProjectPythia/web-map-feature-services-cookbook" />
 </a>
 
 ## Structure
 
-(State one or more sections that will comprise the notebook. E.g., _This cookbook is broken up into two main sections - "Foundations" and "Example Workflows."_ Then, describe each section below.)
+This cookbook is broken up into two main sections - “Foundations” and “Example Workflows.”
 
-### Section 1 ( Replace with the title of this section, e.g. "Foundations" )
+### Foundations
+The foundational content includes:
+- Static tiles
+- Interactive tiles
 
-(Add content for this section, e.g., "The foundational content includes ... ")
-
-### Section 2 ( Replace with the title of this section, e.g. "Example workflows" )
-
-(Add content for this section, e.g., "Example workflows include ... ")
-
-## Running the Notebooks
-
-You can either run the notebook using [Binder](https://mybinder.org/) or on your local machine.
+### Example Workflows
+Example workflows include:
+- 
 
 ### Running on Binder
 
