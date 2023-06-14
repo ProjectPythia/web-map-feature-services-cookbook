@@ -3,4 +3,7 @@ root: README
 parts:
   - caption: Introduction
     chapters:
-      - file: notebooks/introducing_web_map_feature_services.ipynb
+      - file: notebooks/introduction.ipynb
+  - caption: Web Map Services
+    chapters:
+      - file: notebooks/web_map_services.ipynb
