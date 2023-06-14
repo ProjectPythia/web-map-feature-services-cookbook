@@ -13,3 +13,5 @@ dependencies:
       - requests
       - geoviews
       - panel
+      - geopandas
+      - hvplot
