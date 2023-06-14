@@ -9,4 +9,7 @@ dependencies:
   - cartopy
   - pip:
       - sphinx-pythia-theme
+      - jupyter_bokeh
+      - requests
       - geoviews
+      - panel
