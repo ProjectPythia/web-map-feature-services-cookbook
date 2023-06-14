@@ -1,9 +1,8 @@
 format: jb-book
 root: README
 parts:
-  - caption: Introduction
+  - caption: Foundations
     chapters:
       - file: notebooks/introduction.ipynb
-  - caption: Web Map Services
-    chapters:
       - file: notebooks/web_map_services.ipynb
+      - file: notebooks/web_feature_services.ipynb
