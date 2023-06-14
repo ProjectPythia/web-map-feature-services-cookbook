@@ -1,4 +1,4 @@
-name: cookbook-dev
+name: web-map-feature-services-cookbook-dev
 channels:
   - conda-forge
 dependencies:
