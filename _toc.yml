@@ -6,3 +6,6 @@ parts:
       - file: notebooks/introduction.ipynb
       - file: notebooks/web_map_services.ipynb
       - file: notebooks/web_feature_services.ipynb
+  - caption: Example Workflows
+    chapters:
+      - file: notebooks/nasa_earthdata_gibs_explorer.ipynb
