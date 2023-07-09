@@ -32,13 +32,17 @@ By leveraging web map / feature services, users can easily access pre-processed 
 This cookbook is broken up into two main sections - “Foundations” and “Example Workflows.”
 
 ### Foundations
+
 The foundational content includes:
-- Static tiles
-- Interactive tiles
+
+- Web Map Services
+- Web Feature Services
 
 ### Example Workflows
+
 Example workflows include:
-- 
+
+- NASA Earthdata GIBS Explorer
 
 ### Running on Binder
 
