@@ -4,15 +4,15 @@ channels:
 dependencies:
   - jupyter-book
   - jupyterlab
-  - jupyter_server<2
+  - jupyter_server
   - pip
   - cartopy
+  - jupyter_bokeh
+  - requests
+  - geoviews
+  - panel
+  - geopandas
+  - hvplot
+  - owslib
   - pip:
-      - sphinx-pythia-theme
-      - jupyter_bokeh
-      - requests
-      - geoviews
-      - panel
-      - geopandas
-      - hvplot
-      - owslib
+    - sphinx-pythia-theme
