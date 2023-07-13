@@ -1,0 +1,15 @@
+thumbnail: thumbnail.png
+tags:
+  domains:
+    - Geospatial data
+    - Basemaps
+    - Satellite imagery
+    - Spatial analysis
+    - NASA EarthData GIBS
+    - GIS
+  packages:
+    - hvPlot
+    - cartopy
+    - geoviews
+    - panel
+    - owslib
