@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Map / Feature Services Cookbook &#8212; Project Pythia Cookbook Template</title>
+    <title>Web Map / Feature Services Cookbook &#8212; Web Map / Feature Services Cookbook</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -362,8 +362,9 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <a class="reference internal image-reference" href="_images/thumbnail.png"><img alt="thumbnail" src="_images/thumbnail.png" style="width: 300px;" /></a>
 <div class="tex2jax_ignore mathjax_ignore section" id="web-map-feature-services-cookbook">
 <h1>Web Map / Feature Services Cookbook<a class="headerlink" href="#web-map-feature-services-cookbook" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
-<p><a class="reference external" href="https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml"><img alt="nightly-build" src="https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg" /></a>
-<a class="reference external" href="http://binder.mypythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks"><img alt="Binder" src="http://binder.mypythia.org/badge_logo.svg" /></a></p>
+<p><a class="reference external" href="https://github.com/ProjectPythia/web-map-feature-services-cookbook/actions/workflows/nightly-build.yaml"><img alt="nightly-build" src="https://github.com/ProjectPythia/web-map-feature-services-cookbook/actions/workflows/nightly-build.yaml/badge.svg" /></a>
+<a class="reference external" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks"><img alt="Binder" src="https://binder.projectpythia.org/badge_logo.svg" /></a>
+<a class="reference external" href="https://zenodo.org/badge/latestdoi/653301659"><img alt="DOI" src="https://zenodo.org/badge/653301659.svg" /></a></p>
 <p>This Project Pythia Cookbook covers retrieving and using web map / feature services to help provide the necessary spatial context to your data.</p>
 <div class="section" id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
@@ -379,7 +380,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <p><a class="reference external" href="https://github.com/ahuang11">Andrew Huang</a></p>
 <div class="section" id="contributors">
 <h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<a href="https://github.com/ahuang11/web-map-feature-services-cookbook/graphs/contributors">
+<a href="https://github.com/ProjectPythia/web-map-feature-services-cookbook/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ProjectPythia/web-map-feature-services-cookbook" />
 </a>
 </div>
@@ -405,7 +406,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <div class="section" id="running-on-binder">
 <h3>Running on Binder<a class="headerlink" href="#running-on-binder" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>The simplest way to interact with a Jupyter Notebook is through
-<a class="reference external" href="https://mybinder.org/">Binder</a>, which enables the execution of a
+<a class="reference external" href="https://binder.projectpythia.org/">Binder</a>, which enables the execution of a
 <a class="reference external" href="https://jupyterbook.org">Jupyter Book</a> in the cloud. The details of how this works are not
 important for now. All you need to know is how to launch a Pythia
 Cookbooks chapter via Binder. Simply navigate your mouse to
@@ -424,19 +425,19 @@ Jupyter</a>.</p>
 <p>If you are interested in running this material locally on your computer, you will need to follow this workflow:</p>
 <p>(Replace “cookbook-example” with the title of your cookbooks)</p>
 <ol class="arabic">
-<li><p>Clone the <code class="docutils literal notranslate"><span class="pre">https://github.com/ProjectPythia/cookbook-example</span></code> repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ProjectPythia/cookbook-example.git
+<li><p>Clone the <code class="docutils literal notranslate"><span class="pre">https://github.com/ProjectPythia/web-map-feature-services-cookbook</span></code> repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ProjectPythia/web-map-feature-services-cookbook.git
 </pre></div>
 </div>
 </li>
-<li><p>Move into the <code class="docutils literal notranslate"><span class="pre">cookbook-example</span></code> directory</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>cookbook-example
+<li><p>Move into the <code class="docutils literal notranslate"><span class="pre">web-map-feature-services-cookbook</span></code> directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>web-map-feature-services-cookbook
 </pre></div>
 </div>
 </li>
 <li><p>Create and activate your conda environment from the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
-conda<span class="w"> </span>activate<span class="w"> </span>cookbook-example
+conda<span class="w"> </span>activate<span class="w"> </span>web-map-feature-services-cookbook-dev
 </pre></div>
 </div>
 </li>
@@ -526,11 +527,11 @@ jupyter<span class="w"> </span>lab
     <div class="container-xl">
       <div class="d-flex justify-content-center">
         <p class="py-1 m-0">
-            &copy;&nbsp;2022.
+            &copy;&nbsp;2023.
         
           By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
         
-          Last updated on 9 July 2023.
+          Last updated on 13 July 2023.
         </p>
       </div>
     </div>

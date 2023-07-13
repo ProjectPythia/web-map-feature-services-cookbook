@@ -2,8 +2,9 @@
 
 # Web Map / Feature Services Cookbook
 
-[![nightly-build](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml)
-[![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
+[![nightly-build](https://github.com/ProjectPythia/web-map-feature-services-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/web-map-feature-services-cookbook/actions/workflows/nightly-build.yaml)
+[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
+[![DOI](https://zenodo.org/badge/653301659.svg)](https://zenodo.org/badge/latestdoi/653301659)
 
 This Project Pythia Cookbook covers retrieving and using web map / feature services to help provide the necessary spatial context to your data.
 
@@ -23,7 +24,7 @@ By leveraging web map / feature services, users can easily access pre-processed 
 
 ### Contributors
 
-<a href="https://github.com/ahuang11/web-map-feature-services-cookbook/graphs/contributors">
+<a href="https://github.com/ProjectPythia/web-map-feature-services-cookbook/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ProjectPythia/web-map-feature-services-cookbook" />
 </a>
 
@@ -47,7 +48,7 @@ Example workflows include:
 ### Running on Binder
 
 The simplest way to interact with a Jupyter Notebook is through
-[Binder](https://mybinder.org/), which enables the execution of a
+[Binder](https://binder.projectpythia.org/), which enables the execution of a
 [Jupyter Book](https://jupyterbook.org) in the cloud. The details of how this works are not
 important for now. All you need to know is how to launch a Pythia
 Cookbooks chapter via Binder. Simply navigate your mouse to
@@ -67,20 +68,20 @@ If you are interested in running this material locally on your computer, you wil
 
 (Replace "cookbook-example" with the title of your cookbooks)
 
-1. Clone the `https://github.com/ProjectPythia/cookbook-example` repository:
+1. Clone the `https://github.com/ProjectPythia/web-map-feature-services-cookbook` repository:
 
    ```bash
-    git clone https://github.com/ProjectPythia/cookbook-example.git
+    git clone https://github.com/ProjectPythia/web-map-feature-services-cookbook.git
    ```
 
-1. Move into the `cookbook-example` directory
+1. Move into the `web-map-feature-services-cookbook` directory
    ```bash
-   cd cookbook-example
+   cd web-map-feature-services-cookbook
    ```
 1. Create and activate your conda environment from the `environment.yml` file
    ```bash
    conda env create -f environment.yml
-   conda activate cookbook-example
+   conda activate web-map-feature-services-cookbook-dev
    ```
 1. Move into the `notebooks` directory and start up Jupyterlab
    ```bash
