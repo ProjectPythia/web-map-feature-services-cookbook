@@ -10,4 +10,4 @@ authors:
   - name: "Web Map / Feature Services Cookbook contributors" # use the 'name' field to acknowledge organizations
     website: "https://github.com/ProjectPythia/web-map-feature-services-cookbook/graphs/contributors"
 title: "Web Map / Feature Services Cookbook"
-abstract: "A sample cookbook description."  # this needs updating!
+abstract: "Learn how to use web map and feature services to easily and quickly provide spatial context, without the need to download and process GBs of data!"
