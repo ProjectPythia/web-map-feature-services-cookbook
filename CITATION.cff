@@ -4,9 +4,9 @@ authors:
   # add additional entries for each author -- see https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md
   - family-names: Huang
     given-names: Andrew
-    orcid: https://orcid.org/0000-0000-0000-0000 # optional -- this should be updated!
-    website: https://github.com/ahuang11 # optional
-    # affiliation:  # optional
+    orcid: https://orcid.org/0000-0003-2618-084X
+    website: https://github.com/ahuang11
+    affiliation:  "Anaconda, Inc."
   - name: "Web Map / Feature Services Cookbook contributors" # use the 'name' field to acknowledge organizations
     website: "https://github.com/ProjectPythia/web-map-feature-services-cookbook/graphs/contributors"
 title: "Web Map / Feature Services Cookbook"
