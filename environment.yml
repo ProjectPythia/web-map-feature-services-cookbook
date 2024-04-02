@@ -14,5 +14,4 @@ dependencies:
   - geopandas
   - hvplot
   - owslib
-  - pip:
-    - sphinx-pythia-theme
+  - sphinx-pythia-theme
