@@ -15,3 +15,4 @@ dependencies:
   - hvplot
   - owslib
   - sphinx-pythia-theme
+  - mystmd
