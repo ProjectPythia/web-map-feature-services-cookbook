@@ -8,6 +8,8 @@
 
 This Project Pythia Cookbook covers retrieving and using web map / feature services to help provide the necessary spatial context to your data.
 
+Now using MyST!
+
 ## Motivation
 
 By leveraging web map / feature services, users can easily access pre-processed data layers, utilize ready-to-use tiles, and benefit from production-level data that is continuously updated. This streamlines the data acquisition process and enables users to focus on their analysis tasks rather than data processing.
