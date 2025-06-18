@@ -2,10 +2,9 @@ name: web-map-feature-services-cookbook-dev
 channels:
   - conda-forge
 dependencies:
-  - jupyter-book
   - jupyterlab
+  - jupyterlab-myst
   - jupyter_server
-  - pip
   - cartopy
   - jupyter_bokeh
   - requests
@@ -14,5 +13,4 @@ dependencies:
   - geopandas
   - hvplot
   - owslib
-  - sphinx-pythia-theme
   - mystmd
