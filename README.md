@@ -1,12 +1,14 @@
-<img src="thumbnail.png" alt="thumbnail" width="300"/>
-
 # Web Map / Feature Services Cookbook
+
+<img src="thumbnail.png" alt="thumbnail" width="300"/>
 
 [![nightly-build](https://github.com/ProjectPythia/web-map-feature-services-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/web-map-feature-services-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
 [![DOI](https://zenodo.org/badge/653301659.svg)](https://zenodo.org/badge/latestdoi/653301659)
 
 This Project Pythia Cookbook covers retrieving and using web map / feature services to help provide the necessary spatial context to your data.
+
+Now using MyST!
 
 ## Motivation
 
