@@ -7,7 +7,7 @@ project:
   title: Web Map / Feature Services Cookbook
   
   error_rules:
-      - rule: link-resolves
+    - rule: link-resolves
       severity: ignore
       keys:
         - 'https://doi.org/**'
