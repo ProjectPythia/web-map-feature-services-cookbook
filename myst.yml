@@ -5,11 +5,18 @@ extends:
 project:
   id: 00033604-f595-498a-9407-eab331b49411
   title: Web Map / Feature Services Cookbook
+  
   error_rules:
-    - rule: link-resolves
+      - rule: link-resolves
       severity: ignore
       keys:
+        - 'https://doi.org/**'
+        - 'https://zenodo.org/**'
         - 'https://www.earthdata.nasa.gov/' # says Forbidden but directs just fine
+    - rule: doi-link-valid
+      severity: ignore
+      keys:
+        - 'https://zenodo.org/**'   # also suppress the DOI validation error
   # description:
   # keywords: []
   # authors: []
