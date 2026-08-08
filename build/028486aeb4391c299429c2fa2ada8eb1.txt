@@ -1,0 +1,345 @@
+[31m---------------------------------------------------------------------------[39m
+[31mTimeoutError[39m                              Traceback (most recent call last)
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connectionpool.py:534[39m, in [36mHTTPConnectionPool._make_request[39m[34m(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)[39m
+[32m    533[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m534[39m     response = [30;43mconn[39;49m[30;43m.[39;49m[30;43mgetresponse[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    535[39m [38;5;28;01mexcept[39;00m (BaseSSLError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m e:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connection.py:571[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m    570[39m [38;5;66;03m# Get the response from http.client.HTTPConnection[39;00m
+[32m--> [39m[32m571[39m httplib_response = [30;43msuper[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mgetresponse[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    573[39m [38;5;28;01mtry[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/http/client.py:1459[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m   1458[39m [38;5;28;01mtry[39;00m:
+[32m-> [39m[32m1459[39m     [30;43mresponse[39;49m[30;43m.[39;49m[30;43mbegin[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m   1460[39m [38;5;28;01mexcept[39;00m [38;5;167;01mConnectionError[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/http/client.py:336[39m, in [36mHTTPResponse.begin[39m[34m(self)[39m
+[32m    335[39m [38;5;28;01mwhile[39;00m [38;5;28;01mTrue[39;00m:
+[32m--> [39m[32m336[39m     version, status, reason = [30;43mself[39;49m[30;43m.[39;49m[30;43m_read_status[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    337[39m     [38;5;28;01mif[39;00m status != CONTINUE:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/http/client.py:297[39m, in [36mHTTPResponse._read_status[39m[34m(self)[39m
+[32m    296[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_read_status[39m([38;5;28mself[39m):
+[32m--> [39m[32m297[39m     line = [38;5;28mstr[39m([30;43mself[39;49m[30;43m.[39;49m[30;43mfp[39;49m[30;43m.[39;49m[30;43mreadline[39;49m[30;43m([39;49m[30;43m_MAXLINE[39;49m[30;43m [39;49m[30;43m+[39;49m[30;43m [39;49m[30;43m1[39;49m[30;43m)[39;49m, [33m"[39m[33miso-8859-1[39m[33m"[39m)
+[32m    298[39m     [38;5;28;01mif[39;00m [38;5;28mlen[39m(line) > _MAXLINE:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/socket.py:729[39m, in [36mSocketIO.readinto[39m[34m(self, b)[39m
+[32m    728[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m729[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43m_sock[39;49m[30;43m.[39;49m[30;43mrecv_into[39;49m[30;43m([39;49m[30;43mb[39;49m[30;43m)[39;49m
+[32m    730[39m [38;5;28;01mexcept[39;00m timeout:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/ssl.py:1304[39m, in [36mSSLSocket.recv_into[39m[34m(self, buffer, nbytes, flags)[39m
+[32m   1301[39m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[32m   1302[39m           [33m"[39m[33mnon-zero flags not allowed in calls to recv_into() on [39m[38;5;132;01m%s[39;00m[33m"[39m %
+[32m   1303[39m           [38;5;28mself[39m.[34m__class__[39m)
+[32m-> [39m[32m1304[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mread[39;49m[30;43m([39;49m[30;43mnbytes[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mbuffer[39;49m[30;43m)[39;49m
+[32m   1305[39m [38;5;28;01melse[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/ssl.py:1138[39m, in [36mSSLSocket.read[39m[34m(self, len, buffer)[39m
+[32m   1137[39m [38;5;28;01mif[39;00m buffer [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[32m-> [39m[32m1138[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43m_sslobj[39;49m[30;43m.[39;49m[30;43mread[39;49m[30;43m([39;49m[30;43mlen[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mbuffer[39;49m[30;43m)[39;49m
+[32m   1139[39m [38;5;28;01melse[39;00m:
+
+[31mTimeoutError[39m: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+[31mReadTimeoutError[39m                          Traceback (most recent call last)
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/requests/adapters.py:696[39m, in [36mHTTPAdapter.send[39m[34m(self, request, stream, timeout, verify, cert, proxies)[39m
+[32m    695[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m696[39m     resp = [30;43mconn[39;49m[30;43m.[39;49m[30;43murlopen[39;49m[30;43m([39;49m
+[32m    697[39m [30;43m        [39;49m[30;43mmethod[39;49m[30;43m=[39;49m[30;43mrequest[39;49m[30;43m.[39;49m[30;43mmethod[39;49m[30;43m,[39;49m
+[32m    698[39m [30;43m        [39;49m[30;43murl[39;49m[30;43m=[39;49m[30;43murl[39;49m[30;43m,[39;49m
+[32m    699[39m [30;43m        [39;49m[30;43mbody[39;49m[30;43m=[39;49m[30;43mrequest[39;49m[30;43m.[39;49m[30;43mbody[39;49m[30;43m,[39;49m[30;43m  [39;49m[30;43;03m# type: ignore[arg-type]  # urllib3 stubs don't accept Iterable[bytes | str][39;49;00m
+[32m    700[39m [30;43m        [39;49m[30;43mheaders[39;49m[30;43m=[39;49m[30;43mrequest[39;49m[30;43m.[39;49m[30;43mheaders[39;49m[30;43m,[39;49m[30;43m  [39;49m[30;43;03m# type: ignore[arg-type]  # urllib3#3072[39;49;00m
+[32m    701[39m [30;43m        [39;49m[30;43mredirect[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    702[39m [30;43m        [39;49m[30;43massert_same_host[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    703[39m [30;43m        [39;49m[30;43mpreload_content[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    704[39m [30;43m        [39;49m[30;43mdecode_content[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    705[39m [30;43m        [39;49m[30;43mretries[39;49m[30;43m=[39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mmax_retries[39;49m[30;43m,[39;49m
+[32m    706[39m [30;43m        [39;49m[30;43mtimeout[39;49m[30;43m=[39;49m[30;43mresolved_timeout[39;49m[30;43m,[39;49m
+[32m    707[39m [30;43m        [39;49m[30;43mchunked[39;49m[30;43m=[39;49m[30;43mchunked[39;49m[30;43m,[39;49m
+[32m    708[39m [30;43m    [39;49m[30;43m)[39;49m
+[32m    710[39m [38;5;28;01mexcept[39;00m (ProtocolError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m err:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connectionpool.py:842[39m, in [36mHTTPConnectionPool.urlopen[39m[34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)[39m
+[32m    840[39m     new_e = ProtocolError([33m"[39m[33mConnection aborted.[39m[33m"[39m, new_e)
+[32m--> [39m[32m842[39m retries = [30;43mretries[39;49m[30;43m.[39;49m[30;43mincrement[39;49m[30;43m([39;49m
+[32m    843[39m [30;43m    [39;49m[30;43mmethod[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43murl[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43merror[39;49m[30;43m=[39;49m[30;43mnew_e[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m_pool[39;49m[30;43m=[39;49m[30;43mself[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m_stacktrace[39;49m[30;43m=[39;49m[30;43msys[39;49m[30;43m.[39;49m[30;43mexc_info[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m[[39;49m[30;43m2[39;49m[30;43m][39;49m
+[32m    844[39m [30;43m[39;49m[30;43m)[39;49m
+[32m    845[39m retries.sleep()
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/util/retry.py:498[39m, in [36mRetry.increment[39m[34m(self, method, url, response, error, _pool, _stacktrace)[39m
+[32m    497[39m [38;5;28;01mif[39;00m read [38;5;129;01mis[39;00m [38;5;28;01mFalse[39;00m [38;5;129;01mor[39;00m method [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mor[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m._is_method_retryable(method):
+[32m--> [39m[32m498[39m     [38;5;28;01mraise[39;00m [30;43mreraise[39;49m[30;43m([39;49m[30;43mtype[39;49m[30;43m([39;49m[30;43merror[39;49m[30;43m)[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43merror[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m_stacktrace[39;49m[30;43m)[39;49m
+[32m    499[39m [38;5;28;01melif[39;00m read [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/util/util.py:39[39m, in [36mreraise[39m[34m(tp, value, tb)[39m
+[32m     38[39m         [38;5;28;01mraise[39;00m value.with_traceback(tb)
+[32m---> [39m[32m39[39m     [38;5;28;01mraise[39;00m value
+[32m     40[39m [38;5;28;01mfinally[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connectionpool.py:788[39m, in [36mHTTPConnectionPool.urlopen[39m[34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)[39m
+[32m    787[39m [38;5;66;03m# Make the request on the HTTPConnection object[39;00m
+[32m--> [39m[32m788[39m response = [30;43mself[39;49m[30;43m.[39;49m[30;43m_make_request[39;49m[30;43m([39;49m
+[32m    789[39m [30;43m    [39;49m[30;43mconn[39;49m[30;43m,[39;49m
+[32m    790[39m [30;43m    [39;49m[30;43mmethod[39;49m[30;43m,[39;49m
+[32m    791[39m [30;43m    [39;49m[30;43murl[39;49m[30;43m,[39;49m
+[32m    792[39m [30;43m    [39;49m[30;43mtimeout[39;49m[30;43m=[39;49m[30;43mtimeout_obj[39;49m[30;43m,[39;49m
+[32m    793[39m [30;43m    [39;49m[30;43mbody[39;49m[30;43m=[39;49m[30;43mbody[39;49m[30;43m,[39;49m
+[32m    794[39m [30;43m    [39;49m[30;43mheaders[39;49m[30;43m=[39;49m[30;43mheaders[39;49m[30;43m,[39;49m
+[32m    795[39m [30;43m    [39;49m[30;43mchunked[39;49m[30;43m=[39;49m[30;43mchunked[39;49m[30;43m,[39;49m
+[32m    796[39m [30;43m    [39;49m[30;43mretries[39;49m[30;43m=[39;49m[30;43mretries[39;49m[30;43m,[39;49m
+[32m    797[39m [30;43m    [39;49m[30;43mresponse_conn[39;49m[30;43m=[39;49m[30;43mresponse_conn[39;49m[30;43m,[39;49m
+[32m    798[39m [30;43m    [39;49m[30;43mpreload_content[39;49m[30;43m=[39;49m[30;43mpreload_content[39;49m[30;43m,[39;49m
+[32m    799[39m [30;43m    [39;49m[30;43mdecode_content[39;49m[30;43m=[39;49m[30;43mdecode_content[39;49m[30;43m,[39;49m
+[32m    800[39m [30;43m    [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mresponse_kw[39;49m[30;43m,[39;49m
+[32m    801[39m [30;43m[39;49m[30;43m)[39;49m
+[32m    803[39m [38;5;66;03m# Everything went great![39;00m
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connectionpool.py:536[39m, in [36mHTTPConnectionPool._make_request[39m[34m(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)[39m
+[32m    535[39m [38;5;28;01mexcept[39;00m (BaseSSLError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m e:
+[32m--> [39m[32m536[39m     [30;43mself[39;49m[30;43m.[39;49m[30;43m_raise_timeout[39;49m[30;43m([39;49m[30;43merr[39;49m[30;43m=[39;49m[30;43me[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43murl[39;49m[30;43m=[39;49m[30;43murl[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mtimeout_value[39;49m[30;43m=[39;49m[30;43mread_timeout[39;49m[30;43m)[39;49m
+[32m    537[39m     [38;5;28;01mraise[39;00m
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connectionpool.py:367[39m, in [36mHTTPConnectionPool._raise_timeout[39m[34m(self, err, url, timeout_value)[39m
+[32m    366[39m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(err, SocketTimeout):
+[32m--> [39m[32m367[39m     [38;5;28;01mraise[39;00m ReadTimeoutError(
+[32m    368[39m         [38;5;28mself[39m, url, [33mf[39m[33m"[39m[33mRead timed out. (read timeout=[39m[38;5;132;01m{[39;00mtimeout_value[38;5;132;01m}[39;00m[33m)[39m[33m"[39m
+[32m    369[39m     ) [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01merr[39;00m
+[32m    371[39m [38;5;66;03m# See the above comment about EAGAIN in Python 3.[39;00m
+
+[31mReadTimeoutError[39m: HTTPSConnectionPool(host='gibs.earthdata.nasa.gov', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+[31mReadTimeout[39m                               Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[4][39m[32m, line 105[39m, in [36mNasaEarthDataGibsWmsExplorer.get_url_template[39m[34m(self, layer, time)[39m
+[32m    103[39m         [38;5;28;01mexcept[39;00m Exception:
+[32m    104[39m             get_map_kwargs.pop([33m"time"[39m)
+[32m--> [39m[32m105[39m             url = self.wms.getmap(**get_map_kwargs).geturl()
+[32m    106[39m         url_template = (
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/owslib/map/wms111.py:264[39m, in [36mWebMapService_1_1_1.getmap[39m[34m(self, layers, styles, srs, bbox, format, size, time, transparent, bgcolor, exceptions, method, timeout, **kwargs)[39m
+[32m    262[39m [38;5;28mself[39m.request = bind_url(base_url) + data
+[32m--> [39m[32m264[39m u = [30;43mopenURL[39;49m[30;43m([39;49m[30;43mbase_url[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mdata[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mmethod[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mtimeout[39;49m[30;43m=[39;49m[30;43mtimeout[39;49m[30;43m [39;49m[30;43;01mor[39;49;00m[30;43m [39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mtimeout[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mauth[39;49m[30;43m=[39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mauth[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mheaders[39;49m[30;43m=[39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mheaders[39;49m[30;43m)[39;49m
+[32m    266[39m [38;5;66;03m# check for service exceptions, and return[39;00m
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/owslib/util.py:209[39m, in [36mopenURL[39m[34m(url_base, data, method, cookies, username, password, timeout, headers, verify, cert, auth)[39m
+[32m    207[39m     rkwargs[[33m'[39m[33mcookies[39m[33m'[39m] = cookies
+[32m--> [39m[32m209[39m req = [30;43mrequests[39;49m[30;43m.[39;49m[30;43mrequest[39;49m[30;43m([39;49m[30;43mmethod[39;49m[30;43m.[39;49m[30;43mupper[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43murl_base[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mheaders[39;49m[30;43m=[39;49m[30;43mheaders[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mrkwargs[39;49m[30;43m)[39;49m
+[32m    211[39m [38;5;28;01mif[39;00m req.status_code == [32m400[39m:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/requests/api.py:71[39m, in [36mrequest[39m[34m(method, url, **kwargs)[39m
+[32m     70[39m [38;5;28;01mwith[39;00m sessions.Session() [38;5;28;01mas[39;00m session:
+[32m---> [39m[32m71[39m     [38;5;28;01mreturn[39;00m [30;43msession[39;49m[30;43m.[39;49m[30;43mrequest[39;49m[30;43m([39;49m[30;43mmethod[39;49m[30;43m=[39;49m[30;43mmethod[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43murl[39;49m[30;43m=[39;49m[30;43murl[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/requests/sessions.py:651[39m, in [36mSession.request[39m[34m(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)[39m
+[32m    650[39m send_kwargs.update(settings)
+[32m--> [39m[32m651[39m resp = [30;43mself[39;49m[30;43m.[39;49m[30;43msend[39;49m[30;43m([39;49m[30;43mprep[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43msend_kwargs[39;49m[30;43m)[39;49m
+[32m    653[39m [38;5;28;01mreturn[39;00m resp
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/requests/sessions.py:784[39m, in [36mSession.send[39m[34m(self, request, **kwargs)[39m
+[32m    783[39m [38;5;66;03m# Send the request[39;00m
+[32m--> [39m[32m784[39m r = [30;43madapter[39;49m[30;43m.[39;49m[30;43msend[39;49m[30;43m([39;49m[30;43mrequest[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+[32m    786[39m [38;5;66;03m# Total elapsed time of the request (approximately)[39;00m
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/requests/adapters.py:742[39m, in [36mHTTPAdapter.send[39m[34m(self, request, stream, timeout, verify, cert, proxies)[39m
+[32m    741[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(e, ReadTimeoutError):
+[32m--> [39m[32m742[39m     [38;5;28;01mraise[39;00m ReadTimeout(e, request=request)
+[32m    743[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(e, _InvalidHeader):
+
+[31mReadTimeout[39m: HTTPSConnectionPool(host='gibs.earthdata.nasa.gov', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+[31mTimeoutError[39m                              Traceback (most recent call last)
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connectionpool.py:534[39m, in [36mHTTPConnectionPool._make_request[39m[34m(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)[39m
+[32m    533[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m534[39m     response = [30;43mconn[39;49m[30;43m.[39;49m[30;43mgetresponse[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    535[39m [38;5;28;01mexcept[39;00m (BaseSSLError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m e:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connection.py:571[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m    570[39m [38;5;66;03m# Get the response from http.client.HTTPConnection[39;00m
+[32m--> [39m[32m571[39m httplib_response = [30;43msuper[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mgetresponse[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    573[39m [38;5;28;01mtry[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/http/client.py:1459[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m   1458[39m [38;5;28;01mtry[39;00m:
+[32m-> [39m[32m1459[39m     [30;43mresponse[39;49m[30;43m.[39;49m[30;43mbegin[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m   1460[39m [38;5;28;01mexcept[39;00m [38;5;167;01mConnectionError[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/http/client.py:336[39m, in [36mHTTPResponse.begin[39m[34m(self)[39m
+[32m    335[39m [38;5;28;01mwhile[39;00m [38;5;28;01mTrue[39;00m:
+[32m--> [39m[32m336[39m     version, status, reason = [30;43mself[39;49m[30;43m.[39;49m[30;43m_read_status[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    337[39m     [38;5;28;01mif[39;00m status != CONTINUE:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/http/client.py:297[39m, in [36mHTTPResponse._read_status[39m[34m(self)[39m
+[32m    296[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_read_status[39m([38;5;28mself[39m):
+[32m--> [39m[32m297[39m     line = [38;5;28mstr[39m([30;43mself[39;49m[30;43m.[39;49m[30;43mfp[39;49m[30;43m.[39;49m[30;43mreadline[39;49m[30;43m([39;49m[30;43m_MAXLINE[39;49m[30;43m [39;49m[30;43m+[39;49m[30;43m [39;49m[30;43m1[39;49m[30;43m)[39;49m, [33m"[39m[33miso-8859-1[39m[33m"[39m)
+[32m    298[39m     [38;5;28;01mif[39;00m [38;5;28mlen[39m(line) > _MAXLINE:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/socket.py:729[39m, in [36mSocketIO.readinto[39m[34m(self, b)[39m
+[32m    728[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m729[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43m_sock[39;49m[30;43m.[39;49m[30;43mrecv_into[39;49m[30;43m([39;49m[30;43mb[39;49m[30;43m)[39;49m
+[32m    730[39m [38;5;28;01mexcept[39;00m timeout:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/ssl.py:1304[39m, in [36mSSLSocket.recv_into[39m[34m(self, buffer, nbytes, flags)[39m
+[32m   1301[39m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[32m   1302[39m           [33m"[39m[33mnon-zero flags not allowed in calls to recv_into() on [39m[38;5;132;01m%s[39;00m[33m"[39m %
+[32m   1303[39m           [38;5;28mself[39m.[34m__class__[39m)
+[32m-> [39m[32m1304[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mread[39;49m[30;43m([39;49m[30;43mnbytes[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mbuffer[39;49m[30;43m)[39;49m
+[32m   1305[39m [38;5;28;01melse[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/ssl.py:1138[39m, in [36mSSLSocket.read[39m[34m(self, len, buffer)[39m
+[32m   1137[39m [38;5;28;01mif[39;00m buffer [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[32m-> [39m[32m1138[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43m_sslobj[39;49m[30;43m.[39;49m[30;43mread[39;49m[30;43m([39;49m[30;43mlen[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mbuffer[39;49m[30;43m)[39;49m
+[32m   1139[39m [38;5;28;01melse[39;00m:
+
+[31mTimeoutError[39m: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+[31mReadTimeoutError[39m                          Traceback (most recent call last)
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/requests/adapters.py:696[39m, in [36mHTTPAdapter.send[39m[34m(self, request, stream, timeout, verify, cert, proxies)[39m
+[32m    695[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m696[39m     resp = [30;43mconn[39;49m[30;43m.[39;49m[30;43murlopen[39;49m[30;43m([39;49m
+[32m    697[39m [30;43m        [39;49m[30;43mmethod[39;49m[30;43m=[39;49m[30;43mrequest[39;49m[30;43m.[39;49m[30;43mmethod[39;49m[30;43m,[39;49m
+[32m    698[39m [30;43m        [39;49m[30;43murl[39;49m[30;43m=[39;49m[30;43murl[39;49m[30;43m,[39;49m
+[32m    699[39m [30;43m        [39;49m[30;43mbody[39;49m[30;43m=[39;49m[30;43mrequest[39;49m[30;43m.[39;49m[30;43mbody[39;49m[30;43m,[39;49m[30;43m  [39;49m[30;43;03m# type: ignore[arg-type]  # urllib3 stubs don't accept Iterable[bytes | str][39;49;00m
+[32m    700[39m [30;43m        [39;49m[30;43mheaders[39;49m[30;43m=[39;49m[30;43mrequest[39;49m[30;43m.[39;49m[30;43mheaders[39;49m[30;43m,[39;49m[30;43m  [39;49m[30;43;03m# type: ignore[arg-type]  # urllib3#3072[39;49;00m
+[32m    701[39m [30;43m        [39;49m[30;43mredirect[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    702[39m [30;43m        [39;49m[30;43massert_same_host[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    703[39m [30;43m        [39;49m[30;43mpreload_content[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    704[39m [30;43m        [39;49m[30;43mdecode_content[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    705[39m [30;43m        [39;49m[30;43mretries[39;49m[30;43m=[39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mmax_retries[39;49m[30;43m,[39;49m
+[32m    706[39m [30;43m        [39;49m[30;43mtimeout[39;49m[30;43m=[39;49m[30;43mresolved_timeout[39;49m[30;43m,[39;49m
+[32m    707[39m [30;43m        [39;49m[30;43mchunked[39;49m[30;43m=[39;49m[30;43mchunked[39;49m[30;43m,[39;49m
+[32m    708[39m [30;43m    [39;49m[30;43m)[39;49m
+[32m    710[39m [38;5;28;01mexcept[39;00m (ProtocolError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m err:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connectionpool.py:842[39m, in [36mHTTPConnectionPool.urlopen[39m[34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)[39m
+[32m    840[39m     new_e = ProtocolError([33m"[39m[33mConnection aborted.[39m[33m"[39m, new_e)
+[32m--> [39m[32m842[39m retries = [30;43mretries[39;49m[30;43m.[39;49m[30;43mincrement[39;49m[30;43m([39;49m
+[32m    843[39m [30;43m    [39;49m[30;43mmethod[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43murl[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43merror[39;49m[30;43m=[39;49m[30;43mnew_e[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m_pool[39;49m[30;43m=[39;49m[30;43mself[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m_stacktrace[39;49m[30;43m=[39;49m[30;43msys[39;49m[30;43m.[39;49m[30;43mexc_info[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m[[39;49m[30;43m2[39;49m[30;43m][39;49m
+[32m    844[39m [30;43m[39;49m[30;43m)[39;49m
+[32m    845[39m retries.sleep()
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/util/retry.py:498[39m, in [36mRetry.increment[39m[34m(self, method, url, response, error, _pool, _stacktrace)[39m
+[32m    497[39m [38;5;28;01mif[39;00m read [38;5;129;01mis[39;00m [38;5;28;01mFalse[39;00m [38;5;129;01mor[39;00m method [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mor[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m._is_method_retryable(method):
+[32m--> [39m[32m498[39m     [38;5;28;01mraise[39;00m [30;43mreraise[39;49m[30;43m([39;49m[30;43mtype[39;49m[30;43m([39;49m[30;43merror[39;49m[30;43m)[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43merror[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m_stacktrace[39;49m[30;43m)[39;49m
+[32m    499[39m [38;5;28;01melif[39;00m read [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/util/util.py:39[39m, in [36mreraise[39m[34m(tp, value, tb)[39m
+[32m     38[39m         [38;5;28;01mraise[39;00m value.with_traceback(tb)
+[32m---> [39m[32m39[39m     [38;5;28;01mraise[39;00m value
+[32m     40[39m [38;5;28;01mfinally[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connectionpool.py:788[39m, in [36mHTTPConnectionPool.urlopen[39m[34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)[39m
+[32m    787[39m [38;5;66;03m# Make the request on the HTTPConnection object[39;00m
+[32m--> [39m[32m788[39m response = [30;43mself[39;49m[30;43m.[39;49m[30;43m_make_request[39;49m[30;43m([39;49m
+[32m    789[39m [30;43m    [39;49m[30;43mconn[39;49m[30;43m,[39;49m
+[32m    790[39m [30;43m    [39;49m[30;43mmethod[39;49m[30;43m,[39;49m
+[32m    791[39m [30;43m    [39;49m[30;43murl[39;49m[30;43m,[39;49m
+[32m    792[39m [30;43m    [39;49m[30;43mtimeout[39;49m[30;43m=[39;49m[30;43mtimeout_obj[39;49m[30;43m,[39;49m
+[32m    793[39m [30;43m    [39;49m[30;43mbody[39;49m[30;43m=[39;49m[30;43mbody[39;49m[30;43m,[39;49m
+[32m    794[39m [30;43m    [39;49m[30;43mheaders[39;49m[30;43m=[39;49m[30;43mheaders[39;49m[30;43m,[39;49m
+[32m    795[39m [30;43m    [39;49m[30;43mchunked[39;49m[30;43m=[39;49m[30;43mchunked[39;49m[30;43m,[39;49m
+[32m    796[39m [30;43m    [39;49m[30;43mretries[39;49m[30;43m=[39;49m[30;43mretries[39;49m[30;43m,[39;49m
+[32m    797[39m [30;43m    [39;49m[30;43mresponse_conn[39;49m[30;43m=[39;49m[30;43mresponse_conn[39;49m[30;43m,[39;49m
+[32m    798[39m [30;43m    [39;49m[30;43mpreload_content[39;49m[30;43m=[39;49m[30;43mpreload_content[39;49m[30;43m,[39;49m
+[32m    799[39m [30;43m    [39;49m[30;43mdecode_content[39;49m[30;43m=[39;49m[30;43mdecode_content[39;49m[30;43m,[39;49m
+[32m    800[39m [30;43m    [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mresponse_kw[39;49m[30;43m,[39;49m
+[32m    801[39m [30;43m[39;49m[30;43m)[39;49m
+[32m    803[39m [38;5;66;03m# Everything went great![39;00m
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connectionpool.py:536[39m, in [36mHTTPConnectionPool._make_request[39m[34m(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)[39m
+[32m    535[39m [38;5;28;01mexcept[39;00m (BaseSSLError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m e:
+[32m--> [39m[32m536[39m     [30;43mself[39;49m[30;43m.[39;49m[30;43m_raise_timeout[39;49m[30;43m([39;49m[30;43merr[39;49m[30;43m=[39;49m[30;43me[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43murl[39;49m[30;43m=[39;49m[30;43murl[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mtimeout_value[39;49m[30;43m=[39;49m[30;43mread_timeout[39;49m[30;43m)[39;49m
+[32m    537[39m     [38;5;28;01mraise[39;00m
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/urllib3/connectionpool.py:367[39m, in [36mHTTPConnectionPool._raise_timeout[39m[34m(self, err, url, timeout_value)[39m
+[32m    366[39m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(err, SocketTimeout):
+[32m--> [39m[32m367[39m     [38;5;28;01mraise[39;00m ReadTimeoutError(
+[32m    368[39m         [38;5;28mself[39m, url, [33mf[39m[33m"[39m[33mRead timed out. (read timeout=[39m[38;5;132;01m{[39;00mtimeout_value[38;5;132;01m}[39;00m[33m)[39m[33m"[39m
+[32m    369[39m     ) [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01merr[39;00m
+[32m    371[39m [38;5;66;03m# See the above comment about EAGAIN in Python 3.[39;00m
+
+[31mReadTimeoutError[39m: HTTPSConnectionPool(host='gibs.earthdata.nasa.gov', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+[31mReadTimeout[39m                               Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[8][39m[32m, line 2[39m
+[32m      1[39m pop_density_2000_map = get_web_map([33m"GPW"[39m, [33m"Population_Density_2000"[39m)
+[32m----> [39m[32m2[39m water_bodies = get_web_map([33m"Miscellaneous"[39m, [33m"Water Bodies"[39m)
+[32m      3[39m xlim = ([32m2735065.540470079[39m, [32m3886016.688009746[39m)
+[32m      4[39m ylim = ([32m2442736.280432458[39m, [32m3639157.2571363684[39m)
+[32m      5[39m 
+
+[36mCell[39m[36m [39m[32mIn[7][39m[32m, line 4[39m, in [36mget_web_map[39m[34m(product, product_layer)[39m
+[32m      1[39m [38;5;28;01mdef[39;00m get_web_map(product, product_layer):
+[32m      2[39m     return (
+[32m      3[39m         gv.WMTS(
+[32m----> [39m[32m4[39m             explorer.get_url_template(explorer.get_layer(product, product_layer))
+[32m      5[39m         ).opts(responsive=[38;5;28;01mTrue[39;00m, height=[32m500[39m, title=product_layer, global_extent=[38;5;28;01mTrue[39;00m) *
+[32m      6[39m         gv.feature.coastline() * gv.feature.borders() * gv.tile_sources.StamenLabels()
+[32m      7[39m     )
+
+[36mCell[39m[36m [39m[32mIn[4][39m[32m, line 105[39m, in [36mNasaEarthDataGibsWmsExplorer.get_url_template[39m[34m(self, layer, time)[39m
+[32m    101[39m         [38;5;28;01mtry[39;00m:
+[32m    102[39m             url = self.wms.getmap(**get_map_kwargs).geturl()
+[32m    103[39m         [38;5;28;01mexcept[39;00m Exception:
+[32m    104[39m             get_map_kwargs.pop([33m"time"[39m)
+[32m--> [39m[32m105[39m             url = self.wms.getmap(**get_map_kwargs).geturl()
+[32m    106[39m         url_template = (
+[32m    107[39m             url.replace(str(XMIN), [33m"{XMIN}"[39m)
+[32m    108[39m             .replace(str(YMIN), [33m"{YMIN}"[39m)
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/owslib/map/wms111.py:264[39m, in [36mWebMapService_1_1_1.getmap[39m[34m(self, layers, styles, srs, bbox, format, size, time, transparent, bgcolor, exceptions, method, timeout, **kwargs)[39m
+[32m    260[39m data = urlencode(request)
+[32m    262[39m [38;5;28mself[39m.request = bind_url(base_url) + data
+[32m--> [39m[32m264[39m u = [30;43mopenURL[39;49m[30;43m([39;49m[30;43mbase_url[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mdata[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mmethod[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mtimeout[39;49m[30;43m=[39;49m[30;43mtimeout[39;49m[30;43m [39;49m[30;43;01mor[39;49;00m[30;43m [39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mtimeout[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mauth[39;49m[30;43m=[39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mauth[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mheaders[39;49m[30;43m=[39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mheaders[39;49m[30;43m)[39;49m
+[32m    266[39m [38;5;66;03m# check for service exceptions, and return[39;00m
+[32m    267[39m [38;5;28;01mif[39;00m u.info().get([33m'[39m[33mContent-Type[39m[33m'[39m, [33m'[39m[33m'[39m).split([33m'[39m[33m;[39m[33m'[39m)[[32m0[39m] [38;5;129;01min[39;00m [[33m'[39m[33mapplication/vnd.ogc.se_xml[39m[33m'[39m]:
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/owslib/util.py:209[39m, in [36mopenURL[39m[34m(url_base, data, method, cookies, username, password, timeout, headers, verify, cert, auth)[39m
+[32m    206[39m [38;5;28;01mif[39;00m cookies [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+[32m    207[39m     rkwargs[[33m'[39m[33mcookies[39m[33m'[39m] = cookies
+[32m--> [39m[32m209[39m req = [30;43mrequests[39;49m[30;43m.[39;49m[30;43mrequest[39;49m[30;43m([39;49m[30;43mmethod[39;49m[30;43m.[39;49m[30;43mupper[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43murl_base[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mheaders[39;49m[30;43m=[39;49m[30;43mheaders[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mrkwargs[39;49m[30;43m)[39;49m
+[32m    211[39m [38;5;28;01mif[39;00m req.status_code == [32m400[39m:
+[32m    212[39m     [38;5;28;01mraise[39;00m ServiceException(req.text)
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/requests/api.py:71[39m, in [36mrequest[39m[34m(method, url, **kwargs)[39m
+[32m     67[39m [38;5;66;03m# By using the 'with' statement we are sure the session is closed, thus we[39;00m
+[32m     68[39m [38;5;66;03m# avoid leaving sockets open which can trigger a ResourceWarning in some[39;00m
+[32m     69[39m [38;5;66;03m# cases, and look like a memory leak in others.[39;00m
+[32m     70[39m [38;5;28;01mwith[39;00m sessions.Session() [38;5;28;01mas[39;00m session:
+[32m---> [39m[32m71[39m     [38;5;28;01mreturn[39;00m [30;43msession[39;49m[30;43m.[39;49m[30;43mrequest[39;49m[30;43m([39;49m[30;43mmethod[39;49m[30;43m=[39;49m[30;43mmethod[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43murl[39;49m[30;43m=[39;49m[30;43murl[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/requests/sessions.py:651[39m, in [36mSession.request[39m[34m(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)[39m
+[32m    646[39m send_kwargs = {
+[32m    647[39m     [33m"[39m[33mtimeout[39m[33m"[39m: timeout,
+[32m    648[39m     [33m"[39m[33mallow_redirects[39m[33m"[39m: allow_redirects,
+[32m    649[39m }
+[32m    650[39m send_kwargs.update(settings)
+[32m--> [39m[32m651[39m resp = [30;43mself[39;49m[30;43m.[39;49m[30;43msend[39;49m[30;43m([39;49m[30;43mprep[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43msend_kwargs[39;49m[30;43m)[39;49m
+[32m    653[39m [38;5;28;01mreturn[39;00m resp
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/requests/sessions.py:784[39m, in [36mSession.send[39m[34m(self, request, **kwargs)[39m
+[32m    781[39m start = preferred_clock()
+[32m    783[39m [38;5;66;03m# Send the request[39;00m
+[32m--> [39m[32m784[39m r = [30;43madapter[39;49m[30;43m.[39;49m[30;43msend[39;49m[30;43m([39;49m[30;43mrequest[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+[32m    786[39m [38;5;66;03m# Total elapsed time of the request (approximately)[39;00m
+[32m    787[39m elapsed = preferred_clock() - start
+
+[36mFile [39m[32m~/micromamba/envs/web-map-feature-services-cookbook-dev/lib/python3.14/site-packages/requests/adapters.py:742[39m, in [36mHTTPAdapter.send[39m[34m(self, request, stream, timeout, verify, cert, proxies)[39m
+[32m    740[39m     [38;5;28;01mraise[39;00m SSLError(e, request=request)
+[32m    741[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(e, ReadTimeoutError):
+[32m--> [39m[32m742[39m     [38;5;28;01mraise[39;00m ReadTimeout(e, request=request)
+[32m    743[39m [38;5;28;01melif[39;00m [38;5;28misinstance[39m(e, _InvalidHeader):
+[32m    744[39m     [38;5;28;01mraise[39;00m InvalidHeader(e, request=request)
+
+[31mReadTimeout[39m: HTTPSConnectionPool(host='gibs.earthdata.nasa.gov', port=443): Read timed out. (read timeout=30)
