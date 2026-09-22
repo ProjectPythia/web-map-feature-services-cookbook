@@ -1,0 +1,1 @@
+import{c as e}from"/web-map-feature-services-cookbook/build/_shared/chunk-RAQ24GF6.js";var n=e((l,t)=>{function a(i){return{name:"Plain text",aliases:["text","txt"],disableAutodetect:!0}}t.exports=a});export default n();
